@@ -1,0 +1,263 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Test", "00 - Test", "{666EF9DF-B856-4D61-89ED-388CB48132B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{6262D83A-F7FE-4F81-A162-11B110D20DA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{8C21960C-F533-452D-BAFD-00D212833888}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infrastructure", "04 - Infrastructure", "{218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{C6E60464-D96C-441C-A2B3-C01378B46A6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure.Configuration", "Search.Infrastructure.Configuration\Search.Infrastructure.Configuration.csproj", "{5C7CFC00-8CE5-44A9-9A15-C0F98B123C99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure.Configuration.Abstract", "Search.Infrastructure.Configuration.Abstract\Search.Infrastructure.Configuration.Abstract.csproj", "{B32BBD15-8E92-4043-8B8C-515C68D0C75D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure.Injection", "Search.Infrastructure.Injection\Search.Infrastructure.Injection.csproj", "{E11D60E6-C5D8-4286-B7E9-D5AD2F02B8E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure.Logging", "Search.Infrastructure.Logging\Search.Infrastructure.Logging.csproj", "{BD6BD71B-D24A-4E48-B104-884D8BB57D01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure.Logging.Abstract", "Search.Infrastructure.Logging.Abstract\Search.Infrastructure.Logging.Abstract.csproj", "{77B20E13-DF09-473F-9CE0-09DEA1E289D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure.Security", "Search.Infrastructure.Security\Search.Infrastructure.Security.csproj", "{45503B69-499E-4E85-83E6-7CB0FB7AFEB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure.Security.Abstract", "Search.Infrastructure.Security.Abstract\Search.Infrastructure.Security.Abstract.csproj", "{9903C2D7-7246-486C-87A0-EF32A538D609}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A7082584-CD69-4B33-8061-F4D19AEDD073}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{D600E951-417C-41C6-A6D1-F7FAED43B960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Application", "Search.Application\Search.Application.csproj", "{4AA43780-1DDA-4AA1-9FF6-825F5F6CDAEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Application.Abstract", "Search.Application.Abstract\Search.Application.Abstract.csproj", "{B87AF2BF-C72D-48DD-B198-2550D2FD261F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Presentation.API", "Search.Presentation.API\Search.Presentation.API.csproj", "{3D18C04C-45A2-4625-B933-9DAC77D14B26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure.Exceptions", "Search.Infrastructure.Exceptions\Search.Infrastructure.Exceptions.csproj", "{F7935D7C-F6BB-4F5A-B8E5-8F5FAC4AA933}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Presentation.API.Tests", "Search.Presentation.API.Tests\Search.Presentation.API.Tests.csproj", "{D1E9AE0F-0E41-4353-AD55-BB7B03455790}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Application.Tests", "Search.Application.Tests\Search.Application.Tests.csproj", "{610C950B-0B48-468B-84F5-80ADB71139C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure", "Search.Infrastructure\Search.Infrastructure.csproj", "{5DC9D9EE-5E24-4833-B33D-E3003DD2410C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Infrastructure.Abstract", "Search.Infrastructure.Abstract\Search.Infrastructure.Abstract.csproj", "{FC695423-815F-4F86-8629-BEF4D7FC1FD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Data", "03 - Data", "{DD6E69E8-8B4C-4152-8F7B-94C5BC9F8F98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.DataAccess.ExternalProviders", "Search.DataAccess.ExternalProviders\Search.DataAccess.ExternalProviders.csproj", "{045C85B2-476C-4F0C-8577-C070896B1EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.DataAccess.ElasticSearch", "Search.DataAccess.ElasticSearch\Search.DataAccess.ElasticSearch.csproj", "{BED04224-48FC-4148-ACD1-B25361606305}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Package-SearchAPI|Any CPU = Package-SearchAPI|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C7CFC00-8CE5-44A9-9A15-C0F98B123C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7CFC00-8CE5-44A9-9A15-C0F98B123C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7CFC00-8CE5-44A9-9A15-C0F98B123C99}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{5C7CFC00-8CE5-44A9-9A15-C0F98B123C99}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{5C7CFC00-8CE5-44A9-9A15-C0F98B123C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7CFC00-8CE5-44A9-9A15-C0F98B123C99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32BBD15-8E92-4043-8B8C-515C68D0C75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32BBD15-8E92-4043-8B8C-515C68D0C75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32BBD15-8E92-4043-8B8C-515C68D0C75D}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{B32BBD15-8E92-4043-8B8C-515C68D0C75D}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{B32BBD15-8E92-4043-8B8C-515C68D0C75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32BBD15-8E92-4043-8B8C-515C68D0C75D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E11D60E6-C5D8-4286-B7E9-D5AD2F02B8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11D60E6-C5D8-4286-B7E9-D5AD2F02B8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11D60E6-C5D8-4286-B7E9-D5AD2F02B8E6}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{E11D60E6-C5D8-4286-B7E9-D5AD2F02B8E6}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{E11D60E6-C5D8-4286-B7E9-D5AD2F02B8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11D60E6-C5D8-4286-B7E9-D5AD2F02B8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD6BD71B-D24A-4E48-B104-884D8BB57D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD6BD71B-D24A-4E48-B104-884D8BB57D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD6BD71B-D24A-4E48-B104-884D8BB57D01}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{BD6BD71B-D24A-4E48-B104-884D8BB57D01}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{BD6BD71B-D24A-4E48-B104-884D8BB57D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD6BD71B-D24A-4E48-B104-884D8BB57D01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B20E13-DF09-473F-9CE0-09DEA1E289D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B20E13-DF09-473F-9CE0-09DEA1E289D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B20E13-DF09-473F-9CE0-09DEA1E289D5}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{77B20E13-DF09-473F-9CE0-09DEA1E289D5}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{77B20E13-DF09-473F-9CE0-09DEA1E289D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B20E13-DF09-473F-9CE0-09DEA1E289D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45503B69-499E-4E85-83E6-7CB0FB7AFEB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45503B69-499E-4E85-83E6-7CB0FB7AFEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45503B69-499E-4E85-83E6-7CB0FB7AFEB4}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{45503B69-499E-4E85-83E6-7CB0FB7AFEB4}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{45503B69-499E-4E85-83E6-7CB0FB7AFEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45503B69-499E-4E85-83E6-7CB0FB7AFEB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9903C2D7-7246-486C-87A0-EF32A538D609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9903C2D7-7246-486C-87A0-EF32A538D609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9903C2D7-7246-486C-87A0-EF32A538D609}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{9903C2D7-7246-486C-87A0-EF32A538D609}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{9903C2D7-7246-486C-87A0-EF32A538D609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9903C2D7-7246-486C-87A0-EF32A538D609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA43780-1DDA-4AA1-9FF6-825F5F6CDAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA43780-1DDA-4AA1-9FF6-825F5F6CDAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA43780-1DDA-4AA1-9FF6-825F5F6CDAEE}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{4AA43780-1DDA-4AA1-9FF6-825F5F6CDAEE}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{4AA43780-1DDA-4AA1-9FF6-825F5F6CDAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA43780-1DDA-4AA1-9FF6-825F5F6CDAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87AF2BF-C72D-48DD-B198-2550D2FD261F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87AF2BF-C72D-48DD-B198-2550D2FD261F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87AF2BF-C72D-48DD-B198-2550D2FD261F}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{B87AF2BF-C72D-48DD-B198-2550D2FD261F}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{B87AF2BF-C72D-48DD-B198-2550D2FD261F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87AF2BF-C72D-48DD-B198-2550D2FD261F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D18C04C-45A2-4625-B933-9DAC77D14B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D18C04C-45A2-4625-B933-9DAC77D14B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D18C04C-45A2-4625-B933-9DAC77D14B26}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{3D18C04C-45A2-4625-B933-9DAC77D14B26}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{3D18C04C-45A2-4625-B933-9DAC77D14B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D18C04C-45A2-4625-B933-9DAC77D14B26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7935D7C-F6BB-4F5A-B8E5-8F5FAC4AA933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7935D7C-F6BB-4F5A-B8E5-8F5FAC4AA933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7935D7C-F6BB-4F5A-B8E5-8F5FAC4AA933}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{F7935D7C-F6BB-4F5A-B8E5-8F5FAC4AA933}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{F7935D7C-F6BB-4F5A-B8E5-8F5FAC4AA933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7935D7C-F6BB-4F5A-B8E5-8F5FAC4AA933}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1E9AE0F-0E41-4353-AD55-BB7B03455790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E9AE0F-0E41-4353-AD55-BB7B03455790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E9AE0F-0E41-4353-AD55-BB7B03455790}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{D1E9AE0F-0E41-4353-AD55-BB7B03455790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E9AE0F-0E41-4353-AD55-BB7B03455790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610C950B-0B48-468B-84F5-80ADB71139C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610C950B-0B48-468B-84F5-80ADB71139C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610C950B-0B48-468B-84F5-80ADB71139C6}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{610C950B-0B48-468B-84F5-80ADB71139C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610C950B-0B48-468B-84F5-80ADB71139C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DC9D9EE-5E24-4833-B33D-E3003DD2410C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DC9D9EE-5E24-4833-B33D-E3003DD2410C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DC9D9EE-5E24-4833-B33D-E3003DD2410C}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{5DC9D9EE-5E24-4833-B33D-E3003DD2410C}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{5DC9D9EE-5E24-4833-B33D-E3003DD2410C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DC9D9EE-5E24-4833-B33D-E3003DD2410C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC695423-815F-4F86-8629-BEF4D7FC1FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC695423-815F-4F86-8629-BEF4D7FC1FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC695423-815F-4F86-8629-BEF4D7FC1FD7}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{FC695423-815F-4F86-8629-BEF4D7FC1FD7}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{FC695423-815F-4F86-8629-BEF4D7FC1FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC695423-815F-4F86-8629-BEF4D7FC1FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{045C85B2-476C-4F0C-8577-C070896B1EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{045C85B2-476C-4F0C-8577-C070896B1EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{045C85B2-476C-4F0C-8577-C070896B1EFB}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{045C85B2-476C-4F0C-8577-C070896B1EFB}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{045C85B2-476C-4F0C-8577-C070896B1EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{045C85B2-476C-4F0C-8577-C070896B1EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED04224-48FC-4148-ACD1-B25361606305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED04224-48FC-4148-ACD1-B25361606305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED04224-48FC-4148-ACD1-B25361606305}.Package-SearchAPI|Any CPU.ActiveCfg = Package-SearchAPI|Any CPU
+		{BED04224-48FC-4148-ACD1-B25361606305}.Package-SearchAPI|Any CPU.Build.0 = Package-SearchAPI|Any CPU
+		{BED04224-48FC-4148-ACD1-B25361606305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED04224-48FC-4148-ACD1-B25361606305}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C6E60464-D96C-441C-A2B3-C01378B46A6C} = {6262D83A-F7FE-4F81-A162-11B110D20DA1}
+		{5C7CFC00-8CE5-44A9-9A15-C0F98B123C99} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{B32BBD15-8E92-4043-8B8C-515C68D0C75D} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{E11D60E6-C5D8-4286-B7E9-D5AD2F02B8E6} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{BD6BD71B-D24A-4E48-B104-884D8BB57D01} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{77B20E13-DF09-473F-9CE0-09DEA1E289D5} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{45503B69-499E-4E85-83E6-7CB0FB7AFEB4} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{9903C2D7-7246-486C-87A0-EF32A538D609} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{A7082584-CD69-4B33-8061-F4D19AEDD073} = {666EF9DF-B856-4D61-89ED-388CB48132B4}
+		{D600E951-417C-41C6-A6D1-F7FAED43B960} = {666EF9DF-B856-4D61-89ED-388CB48132B4}
+		{4AA43780-1DDA-4AA1-9FF6-825F5F6CDAEE} = {8C21960C-F533-452D-BAFD-00D212833888}
+		{B87AF2BF-C72D-48DD-B198-2550D2FD261F} = {8C21960C-F533-452D-BAFD-00D212833888}
+		{3D18C04C-45A2-4625-B933-9DAC77D14B26} = {C6E60464-D96C-441C-A2B3-C01378B46A6C}
+		{F7935D7C-F6BB-4F5A-B8E5-8F5FAC4AA933} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{D1E9AE0F-0E41-4353-AD55-BB7B03455790} = {A7082584-CD69-4B33-8061-F4D19AEDD073}
+		{610C950B-0B48-468B-84F5-80ADB71139C6} = {D600E951-417C-41C6-A6D1-F7FAED43B960}
+		{5DC9D9EE-5E24-4833-B33D-E3003DD2410C} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{FC695423-815F-4F86-8629-BEF4D7FC1FD7} = {218BE7EF-63BA-4163-AE7D-2DF75A9FA7E6}
+		{045C85B2-476C-4F0C-8577-C070896B1EFB} = {DD6E69E8-8B4C-4152-8F7B-94C5BC9F8F98}
+		{BED04224-48FC-4148-ACD1-B25361606305} = {DD6E69E8-8B4C-4152-8F7B-94C5BC9F8F98}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 18
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://journal.tfs.frontiersin.info:8080/tfs/journal
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Search.Infrastructure.Configuration\\Search.Infrastructure.Configuration.csproj
+		SccProjectTopLevelParentUniqueName1 = Journal.Search.sln
+		SccProjectName1 = Search.Infrastructure.Configuration
+		SccLocalPath1 = Search.Infrastructure.Configuration
+		SccProjectUniqueName2 = Search.Infrastructure.Configuration.Abstract\\Search.Infrastructure.Configuration.Abstract.csproj
+		SccProjectTopLevelParentUniqueName2 = Journal.Search.sln
+		SccProjectName2 = Search.Infrastructure.Configuration.Abstract
+		SccLocalPath2 = Search.Infrastructure.Configuration.Abstract
+		SccProjectUniqueName3 = Search.Infrastructure.Injection\\Search.Infrastructure.Injection.csproj
+		SccProjectTopLevelParentUniqueName3 = Journal.Search.sln
+		SccProjectName3 = Search.Infrastructure.Injection
+		SccLocalPath3 = Search.Infrastructure.Injection
+		SccProjectUniqueName4 = Search.Infrastructure.Logging\\Search.Infrastructure.Logging.csproj
+		SccProjectTopLevelParentUniqueName4 = Journal.Search.sln
+		SccProjectName4 = Search.Infrastructure.Logging
+		SccLocalPath4 = Search.Infrastructure.Logging
+		SccProjectUniqueName5 = Search.Infrastructure.Logging.Abstract\\Search.Infrastructure.Logging.Abstract.csproj
+		SccProjectTopLevelParentUniqueName5 = Journal.Search.sln
+		SccProjectName5 = Search.Infrastructure.Logging.Abstract
+		SccLocalPath5 = Search.Infrastructure.Logging.Abstract
+		SccProjectUniqueName6 = Search.Infrastructure.Security\\Search.Infrastructure.Security.csproj
+		SccProjectTopLevelParentUniqueName6 = Journal.Search.sln
+		SccProjectName6 = Search.Infrastructure.Security
+		SccLocalPath6 = Search.Infrastructure.Security
+		SccProjectUniqueName7 = Search.Infrastructure.Security.Abstract\\Search.Infrastructure.Security.Abstract.csproj
+		SccProjectTopLevelParentUniqueName7 = Journal.Search.sln
+		SccProjectName7 = Search.Infrastructure.Security.Abstract
+		SccLocalPath7 = Search.Infrastructure.Security.Abstract
+		SccProjectUniqueName8 = Search.Application\\Search.Application.csproj
+		SccProjectTopLevelParentUniqueName8 = Journal.Search.sln
+		SccProjectName8 = Search.Application
+		SccLocalPath8 = Search.Application
+		SccProjectUniqueName9 = Search.Application.Abstract\\Search.Application.Abstract.csproj
+		SccProjectTopLevelParentUniqueName9 = Journal.Search.sln
+		SccProjectName9 = Search.Application.Abstract
+		SccLocalPath9 = Search.Application.Abstract
+		SccProjectUniqueName10 = Search.Presentation.API\\Search.Presentation.API.csproj
+		SccProjectTopLevelParentUniqueName10 = Journal.Search.sln
+		SccProjectName10 = Search.Presentation.API
+		SccLocalPath10 = Search.Presentation.API
+		SccProjectUniqueName11 = Search.Infrastructure.Exceptions\\Search.Infrastructure.Exceptions.csproj
+		SccProjectTopLevelParentUniqueName11 = Journal.Search.sln
+		SccProjectName11 = Search.Infrastructure.Exceptions
+		SccLocalPath11 = Search.Infrastructure.Exceptions
+		SccProjectUniqueName12 = Search.Presentation.API.Tests\\Search.Presentation.API.Tests.csproj
+		SccProjectTopLevelParentUniqueName12 = Journal.Search.sln
+		SccProjectName12 = Search.Presentation.API.Tests
+		SccLocalPath12 = Search.Presentation.API.Tests
+		SccProjectUniqueName13 = Search.Application.Tests\\Search.Application.Tests.csproj
+		SccProjectTopLevelParentUniqueName13 = Journal.Search.sln
+		SccProjectName13 = Search.Application.Tests
+		SccLocalPath13 = Search.Application.Tests
+		SccProjectUniqueName14 = Search.Infrastructure\\Search.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName14 = Journal.Search.sln
+		SccProjectName14 = Search.Infrastructure
+		SccLocalPath14 = Search.Infrastructure
+		SccProjectUniqueName15 = Search.Infrastructure.Abstract\\Search.Infrastructure.Abstract.csproj
+		SccProjectTopLevelParentUniqueName15 = Journal.Search.sln
+		SccProjectName15 = Search.Infrastructure.Abstract
+		SccLocalPath15 = Search.Infrastructure.Abstract
+		SccProjectUniqueName16 = Search.DataAccess.ExternalProviders\\Search.DataAccess.ExternalProviders.csproj
+		SccProjectTopLevelParentUniqueName16 = Journal.Search.sln
+		SccProjectName16 = Search.DataAccess.ExternalProviders
+		SccLocalPath16 = Search.DataAccess.ExternalProviders
+		SccProjectUniqueName17 = Search.DataAccess.ElasticSearch\\Search.DataAccess.ElasticSearch.csproj
+		SccProjectTopLevelParentUniqueName17 = Journal.Search.sln
+		SccProjectName17 = Search.DataAccess.ElasticSearch
+		SccLocalPath17 = Search.DataAccess.ElasticSearch
+	EndGlobalSection
+EndGlobal

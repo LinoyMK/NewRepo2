@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+
+  <connectionStrings>
+    <add name="FrontiersLoggingConnectionString" connectionString="Data Source=si18wdb01;Initial Catalog=Frontiers_Log;Integrated Security=SSPI;Max Pool Size=200" providerName="System.Data.SqlClient" xdt:Transform="SetAttributes(connectionString)" xdt:Locator="Match(name)" />
+    <add name="ElasticSearchServerSettings" connectionString="http://es-int.frontiersin.net:9218" xdt:Transform="SetAttributes(connectionString)" xdt:Locator="Match(name)" />
+  </connectionStrings>
+
+  <appSettings>
+
+
+    <!--ElasticSearch -->
+    <add key="ElasticSearch:IndexAlias" value="frontiers-journal" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+    <!--AddressSettings-->
+    <add key="Journal:UI:URL" value="http://journal.frontiers-int18.info" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+    <add key="Loop:UI:URL" value="http://loop.frontiers-int18.info" xdt:Transform="Replace" xdt:Locator="Match(key)" />
+  </appSettings>
+
+  <system.web>
+    <compilation xdt:Transform="RemoveAttributes(debug)"/>
+  </system.web>
+  
+  <system.serviceModel xdt:Transform="Replace">
+    <bindings>
+      <wsHttpBinding>
+        <binding name="WSHttpBinding_IWidgetService" />
+      </wsHttpBinding>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_ISharepointService"
+            maxReceivedMessageSize="2147483644"
+            openTimeout="00:10:00"
+            receiveTimeout="00:10:00"
+            closeTimeout="00:10:00"
+            sendTimeout="00:10:00" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://frontiers-int18.info/NetworkService/WidgetSoapService.svc" binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IWidgetService" contract="IWidgetService" name="WSHttpBinding_IWidgetService">
+      </endpoint>
+      <endpoint address="http://frontiers-int18.info:8089/SharepointService.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_ISharepointService" contract="SharepointService.ISharepointService" name="BasicHttpBinding_ISharepointService" />
+    </client>
+  </system.serviceModel>
+
+  <applicationSettings xdt:Transform="Replace">
+    <Frontiers.Journal.Properties.Settings>
+      <setting name="Frontiers_Journal_WidgetSoapService_WidgetSoapService" serializeAs="String">
+        <value>http://frontiers-int18.info/NetworkService/WidgetSoapService.svc</value>
+      </setting>
+    </Frontiers.Journal.Properties.Settings>
+  </applicationSettings>
+
+  <frontiers.cerberus xdt:Transform="Replace">
+    <mq>
+      <publisher connectionString="amqp://int18:vZFHc3xP@spotted-raccoon.rmq.cloudamqp.com/int18" applicationName="Journal">
+        <routes>
+          <add messageName="Impact-RawData" exchange="Frontiers.RawData" />
+        </routes>
+      </publisher>
+    </mq>
+  </frontiers.cerberus>
+
+  <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" throwExceptions="false">
+    <targets async="true" xdt:Transform="Replace">
+      <target name="Console" xsi:type="Console" layout="${level:uppercase=true} ${message} ${exception:format=ToString}"/>
+      <target xsi:type="Database" name="Database" connectionStringName="FrontiersLoggingConnectionString" commandText="exec WriteLog @EventID,@Priority,@Severity,@Title,@Timestamp,@MachineName,@AppDomainName,@ProcessID,@ProcessName,@ThreadName,@Win32ThreadId,@Message,@FormattedMessage,@LogId">
+        <parameter name="@EventID" layout="0" />
+        <parameter name="@Priority" layout="3" />
+        <parameter name="@Severity" layout="${level}" />
+        <parameter name="@Title" layout="${message}" />
+        <parameter name="@Timestamp" layout="${date}" />
+        <parameter name="@MachineName" layout="${machinename}" />
+        <parameter name="@AppDomainName" layout="JournalSearchAPI" />
+        <parameter name="@ProcessID" layout="${processid}" />
+        <parameter name="@ProcessName" layout="${processname}" />
+        <parameter name="@ThreadName" layout="${threadname}" />
+        <parameter name="@Win32ThreadId" layout="${threadid}" />
+        <parameter name="@Message" layout="${exception}" />
+        <parameter name="@FormattedMessage" layout="${exception:format=tostring}" />
+        <parameter name="@LogId" layout="0" />
+      </target>
+    </targets>
+    <rules xdt:Transform="Replace">
+      <logger name="*" levels="Info,Warn,Error,Fatal,Debug,Trace" writeTo="Console"/>
+      <logger name="*" levels="Error,Fatal" writeTo="Database" />
+    </rules>
+  </nlog>
+
+</configuration>

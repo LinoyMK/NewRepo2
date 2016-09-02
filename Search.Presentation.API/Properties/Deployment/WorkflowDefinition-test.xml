@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<wf:workflow xmlns:wf="http://cerberus.frontiersin.org/schema/deployer/workflow-v1"
+             xmlns:versionCheck="http://cerberus.frontiersin.org/schema/deployer/modules/version-check-v1"
+             xmlns:versionUpdate="http://cerberus.frontiersin.org/schema/deployer/modules/version-update-v1"
+             xmlns:xdt="http://cerberus.frontiersin.org/schema/deployer/modules/xdt-v1"
+             xmlns:sql="http://cerberus.frontiersin.org/schema/deployer/modules/sql-v1"
+             xmlns:webDeploy="http://cerberus.frontiersin.org/schema/deployer/modules/web-deploy-v1"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="
+               http://cerberus.frontiersin.org/schema/deployer/workflow-v1 http://10.179.130.211:9999/deployer/workflow-v1.xsd
+               http://cerberus.frontiersin.org/schema/deployer/modules/version-check-v1 http://10.179.130.211:9999/deployer/modules/version-check-v1.xsd
+               http://cerberus.frontiersin.org/schema/deployer/modules/version-update-v1 http://10.179.130.211:9999/deployer/modules/version-update-v1.xsd
+               http://cerberus.frontiersin.org/schema/deployer/modules/xdt-v1 http://10.179.130.211:9999/deployer/modules/xdt-v1.xsd
+               http://cerberus.frontiersin.org/schema/deployer/modules/sql-v1 http://10.179.130.211:9999/deployer/modules/sql-v1.xsd
+               http://cerberus.frontiersin.org/schema/deployer/modules/web-deploy-v1 http://10.179.130.211:9999/deployer/modules/web-deploy-v1.xsd ">
+
+  <setUp>
+    <!-- Check current system version -->
+    <step moduleName="VersionCheck">
+      <versionCheck:config deploymentDbConnectionString="Addr=stwdb01;Database=Frontiers_Deployment;Integrated Security=SSPI" />
+    </step>
+  </setUp>
+
+  <tearDown>
+    <!-- Update system version -->
+    <step moduleName="VersionUpdate">
+      <versionUpdate:config deploymentDbConnectionString="Addr=stwdb01;Database=Frontiers_Deployment;Integrated Security=SSPI" />
+    </step>
+  </tearDown>
+
+  <main>
+    <!-- Transform config files -->
+   
+    <!-- Search.Presentation.API: Transform environment-specific configuration values -->
+    <step moduleName="XmlDocumentTransformation">
+      <xdt:config transformationFile="ConfigTransformations\Web.config.test.xdt">
+        <webDeployPackageTarget packageFile="WebDeployPackage\Search.Presentation.API.zip" xmlFile="Web.Config" />
+      </xdt:config>
+    </step>
+
+
+    <!-- Deploy to Frontiers_DB database -->
+    <step moduleName="Sql">
+      <sql:config
+        connectionString="Addr=stwdb01;Database=Frontiers_DB;Integrated Security=SSPI"
+        deployScript="Sql\Frontiers_DB\Schema.deploy.sql"
+        rollbackScript="Sql\Frontiers_DB\Schema.rollback.sql" />
+    </step>
+
+    <step moduleName="Sql">
+      <sql:config
+        connectionString="Addr=stwdb01;Database=Frontiers_DB;Integrated Security=SSPI"
+        deployScript="Sql\Frontiers_DB\Data.deploy.sql"
+        rollbackScript="Sql\Frontiers_DB\Data.rollback.sql" />
+    </step>
+
+    <!-- Deploy to webservers -->
+    <step moduleName="WebDeploy">
+      <webDeploy:config hostname="stweb17"
+                        packageDirectory="WebDeployPackage" 
+                        deploymentDbConnectionString="Addr=stwdb01;Database=Frontiers_Deployment;Integrated Security=SSPI"/>
+    </step>
+    <step moduleName="WebDeploy">
+      <webDeploy:config hostname="stweb18"
+                        packageDirectory="WebDeployPackage"
+                        deploymentDbConnectionString="Addr=stwdb01;Database=Frontiers_Deployment;Integrated Security=SSPI"/>
+    </step>
+  </main>
+</wf:workflow>

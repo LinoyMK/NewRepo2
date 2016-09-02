@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E11D60E6-C5D8-4286-B7E9-D5AD2F02B8E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Search.Infrastructure.Injection</RootNamespace>
+    <AssemblyName>Search.Infrastructure.Injection</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Package-SearchAPI|AnyCPU'">
+    <OutputPath>bin\Package-SearchAPI\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainNinjectModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Search.Application.Abstract\Search.Application.Abstract.csproj">
+      <Project>{b87af2bf-c72d-48dd-b198-2550d2fd261f}</Project>
+      <Name>Search.Application.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.Application\Search.Application.csproj">
+      <Project>{4aa43780-1dda-4aa1-9ff6-825f5f6cdaee}</Project>
+      <Name>Search.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.DataAccess.ElasticSearch\Search.DataAccess.ElasticSearch.csproj">
+      <Project>{bed04224-48fc-4148-acd1-b25361606305}</Project>
+      <Name>Search.DataAccess.ElasticSearch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.Infrastructure.Abstract\Search.Infrastructure.Abstract.csproj">
+      <Project>{fc695423-815f-4f86-8629-bef4d7fc1fd7}</Project>
+      <Name>Search.Infrastructure.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.Infrastructure.Configuration.Abstract\Search.Infrastructure.Configuration.Abstract.csproj">
+      <Project>{b32bbd15-8e92-4043-8b8c-515c68d0c75d}</Project>
+      <Name>Search.Infrastructure.Configuration.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.Infrastructure.Configuration\Search.Infrastructure.Configuration.csproj">
+      <Project>{5c7cfc00-8ce5-44a9-9a15-c0f98b123c99}</Project>
+      <Name>Search.Infrastructure.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.Infrastructure.Logging.Abstract\Search.Infrastructure.Logging.Abstract.csproj">
+      <Project>{77b20e13-df09-473f-9ce0-09dea1e289d5}</Project>
+      <Name>Search.Infrastructure.Logging.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.Infrastructure.Logging\Search.Infrastructure.Logging.csproj">
+      <Project>{bd6bd71b-d24a-4e48-b104-884d8bb57d01}</Project>
+      <Name>Search.Infrastructure.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.Infrastructure.Security.Abstract\Search.Infrastructure.Security.Abstract.csproj">
+      <Project>{9903c2d7-7246-486c-87a0-ef32a538d609}</Project>
+      <Name>Search.Infrastructure.Security.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.Infrastructure.Security\Search.Infrastructure.Security.csproj">
+      <Project>{45503b69-499e-4e85-83e6-7cb0fb7afeb4}</Project>
+      <Name>Search.Infrastructure.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Search.Infrastructure\Search.Infrastructure.csproj">
+      <Project>{5dc9d9ee-5e24-4833-b33d-e3003dd2410c}</Project>
+      <Name>Search.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workflowSettings xmlns="http://cerberus.frontiersin.org/schema/deployer/workflow-settings-v1"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://cerberus.frontiersin.org/schema/deployer/workflow-settings-v1 http://10.179.130.211:9999/deployer/workflow-settings-v1.xsd">
+  <entry name="SystemName" value="JournalSearchAPI" />
+</workflowSettings>
